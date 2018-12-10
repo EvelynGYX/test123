@@ -11,14 +11,14 @@
         <environment id="mysql">
             <transactionManager type="JDBC" />
             <dataSource type="POOLED">
-                <property name="driver" value="com.mysql.jdbc.Driver" />
-                <property name="url" value="jdbc:mysql://localhost:3306/mybatis" />
+                <property name="driver" value="com.mysql.cj.jdbc.Driver" />
+                <property name="url" value="jdbc:mysql://127.0.0.1:3306/mybatis?serverTimezone=UTC" />
                 <property name="username" value="root" />
-                <property name="password" value="root" />
+                <property name="password" value="root123" />
             </dataSource>
         </environment>
     </environments>
     <mappers>
-        <mapper resource="com.springmvc.mapper.TestuserMapper.xml" />
+        <mapper resource="com/springmvc/mapper/TestuserMapper.xml" />
     </mappers>
 </configuration>

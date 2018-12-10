@@ -15,10 +15,10 @@ public class MyBatisTest {
 
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
-		InputStream inputStream = Resources.getResourceAsStream("mybatis_config.xml");
+		InputStream inputStream = Resources.getResourceAsStream("mybatis-config.xml");
 		SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
 		SqlSession session = sqlSessionFactory.openSession();
-		Testuser user = new Testuser("admin","female",23);
+		Testuser user = new Testuser("admin","ab",23);
 		session.insert("com.springmvc.mapper.TestuserMapper.save", user);
 		session.commit();
 		session.close();
